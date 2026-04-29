@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Shattered Riffs</title>
     <link rel="shortcut icon" href="./assets/icons/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+    </style>
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header class="header">
-        <div class="container header__content">
-            <h1 class="logo">Shattered Riffs</h1>
+        <div class="container_header__content">
+            <div class="logo_nombre">
+                <img src="assets/icons/logo-removebg-preview.png" alt="">
+                <h1 class="logo">Shattered Riffs</h1>
+            </div>
 
             <!-- Nav for desktop / hamburger for mobile -->
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#media">Media</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
 
-            <!-- Hint for JS (optional extra points) -->
-            <button class="menu-toggle">☰</button>
+            <div class="nav_list_button">
+                <!-- Hint for JS (optional extra points) -->
+                <button id="menu-toggle" onclick="showmenu()">☰</button>
+                <nav class="nav">
+                    <ul class="nav_list">
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#media">Media</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
         </div>
     </header>
 
@@ -33,6 +45,21 @@
 
         <!-- HERO -->
         <section class="hero">
+            <ul>
+                <li>
+                    <img src="assets/img/img-5.jpg
+                " alt="">
+                </li>
+                <li>
+                    <img src="assets/img/img-10.jpg" alt="">
+                </li>
+                <li>
+                    <img src="assets/img/img-9.jpg" alt="">
+                </li>
+                <li>
+                    <img src="assets/img/img-2.jpg" alt="">
+                </li>
+            </ul>
             <div class="hero__overlay">
                 <h2>Rock the Night</h2>
                 <p>Upcoming Tour</p>
@@ -41,7 +68,7 @@
         </section>
 
         <!-- EVENTS -->
-        <section id="events" class="events container">
+        <section id="events" class="events_container">
             <h2>Upcoming Events</h2>
 
             <!-- Extra points: table -->
@@ -51,7 +78,7 @@
                         <th>Date</th>
                         <th>City</th>
                         <th>Venue</th>
-                        <th>Tickets</th>
+                        <th class="last_line">Tickets</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,67 +86,84 @@
                         <td>15 May</td>
                         <td>Madrid</td>
                         <td>Sala Sol</td>
-                        <td><button>Buy</button></td>
+                        <td><button class="buy_bottom">Buy</button></td>
                     </tr>
                     <tr>
                         <td>18 May</td>
                         <td>Barcelona</td>
                         <td>Razzmatazz</td>
-                        <td><button>Buy</button></td>
+                        <td><button class="buy_bottom">Buy</button></td>
                     </tr>
                     <tr>
                         <td>22 May</td>
                         <td>Valencia</td>
                         <td>Moon Club</td>
-                        <td><button>Buy</button></td>
+                        <td><button class="buy_bottom">Buy</button></td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <!-- ABOUT -->
-        <section id="about" class="about container">
+        <section id="about" class="about_container">
             <h2>About the Band</h2>
+            <img src="./assets/img/img-1.jpg" alt="Band photo">
+            <p>
+                Shattered Riffs is a high-energy rock band known for powerful live performances
+                and raw sound.
+            </p>
 
-            <div class="about__content">
-                <img src="./assets/img/img-1.jpg" alt="Band photo">
 
-                <article>
-                    <p>
-                        Shattered Riffs is a high-energy rock band known for powerful live performances
-                        and raw sound.
-                    </p>
+            <h3>Our Influences</h3>
 
-                    <!-- Required list -->
-                    <h3>Our Influences</h3>
-                    <ul>
-                        <li>Classic Rock</li>
-                        <li>Hard Rock</li>
-                        <li>Alternative</li>
-                    </ul>
+            <div class="about_grid">
+                <article class="about-card">
+                    <img src="./assets/img/img-1.jpg" alt="" class="band-img">
+                    <h3>Classic Rock</h3>
+                    <p>The classic rock genre encompasses rock music made over three decades, from '60s psychedelia and
+                        '70s album-oriented rock (AOR) to 1980s college rock, heavy metal, and 1990's grunge.</p>
+                </article>
+
+                <article class="about-card">
+                    <img src="assets/img/img-8.jpg" alt="" class="band-img">
+                    <h3>Alternative</h3>
+                    <p>Alternative music is music that hasn't yet achieved a mainstream audience ... Alternative music
+                        is any kind of music that has the potential to reach a wider audience..</p>
+                </article>
+
+                <article class="about-card">
+                    <img src="assets/img/img-9.jpg" alt="" class="band-img">
+                    <h3>Hard Rock</h3>
+                    <p>Hard rock is a form of loud, aggressive rock music. The electric guitar is often emphasised, used
+                        with distortion and other effects, both as a rhythm instrument using repetitive riffs with a
+                        varying degree of complexity, and as a solo lead instrument..</p>
                 </article>
             </div>
         </section>
 
-        <!-- MEDIA -->
-        <section id="media" class="media container">
-            <h2>Multimedia</h2>
 
+        <!-- MEDIA -->
+        <section id="media" class="media_container">
+            <h2>Multimedia</h2>
             <div class="media__grid">
-                <img src="./assets/img/img-2.jpg" alt="">
-                <img src="./assets/img/img-3.jpg" alt="">
-                <img src="./assets/img/img-4.jpg" alt="">
-                <img src="./assets/img/img-5.jpg" alt="">
-                <img src="./assets/img/img-6.jpg" alt="">
-                <img src="./assets/img/img-7.jpg" alt="">
+                <div class="div1"><img src="./assets/img/img-2.jpg" alt=""></div>
+                <div class="div2"><img src="./assets/img/img-3.jpg" alt=""></div>
+                <div class="div3"><img src="./assets/img/img-4.jpg" alt=""></div>
+                <div class="div4"><img src="./assets/img/img-5.jpg" alt=""></div>
+                <div class="div5"><img src="./assets/img/img-6.jpg" alt=""></div>
+                <div class="div6"><img src="./assets/img/img-7.jpg" alt=""></div>
             </div>
+
+
+
+
         </section>
 
     </main>
 
     <!-- FOOTER -->
     <footer id="contact" class="footer">
-        <div class="container footer__content">
+        <div class="container_footer__content">
             <p>© <span id="year"></span> Shattered Riffs</p>
 
             <!-- Another possible list -->
@@ -133,4 +177,5 @@
 
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
